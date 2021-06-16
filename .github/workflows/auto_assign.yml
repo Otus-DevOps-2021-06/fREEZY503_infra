@@ -1,6 +1,18 @@
-# Set to true to add assignees to pull requests
-addAssignees: true
+[root@centos1 workflows]# mv auto_assign.yml ../
+[root@centos1 workflows]# ll ..
+total 16
+-rw-r--r-- 1 root root  163 Jun 16 15:54 auto_assign.yml
+drwxr-xr-x 2 root root 4096 Jun 16 15:18 play-travis
+-rw-r--r-- 1 root root  607 Jun 16 14:06 PULL_REQUEST_TEMPLATE.md
+drwxr-xr-x 2 root root 4096 Jun 16 16:00 workflows
+[root@centos1 workflows]# touch auto_assigm.yml
+[root@centos1 workflows]# touch auto_assign.yml
+[root@centos1 workflows]# vi auto_assign.yml
+name: 'Auto Assign'
+on: pull_request
 
-# A list of reviewers to be added to pull requests (GitHub user name)
-reviewers:
-  - mrgreyves
+jobs:
+  add-reviews:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kentaro-m/auto-assign-action@v1.1.2
