@@ -23,5 +23,5 @@ someinternalhost_IP = 10.128.0.27
 
 ## Test App
 
-testapp_IP = 178.154.226.20 <br>
+testapp_IP = 130.193.37.198 <br>
 testapp_port = 9292
