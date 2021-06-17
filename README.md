@@ -16,7 +16,8 @@ ssh -J <bastion1>,<bastion2> <remote>
 ~~~
 This feature is useful if there are multiple levels of separation between a bastion and the final remote host. For example, a public bastion host giving access to a "web tier" set of hosts, within which is a further protected "database tier" group might be accessed.
 
-##Pritunl
-bastion_IP = 178.154.226.20
+## Pritunl
+
+bastion_IP = 178.154.226.20 <br>
 someinternalhost_IP = 10.128.0.27
 
