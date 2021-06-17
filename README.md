@@ -18,6 +18,6 @@ This feature is useful if there are multiple levels of separation between a bast
 
 ## Pritunl
 
-bastion_IP = 178.154.226.20 <br>
+bastion_IP = 178.154.226.20 
 someinternalhost_IP = 10.128.0.27
 
