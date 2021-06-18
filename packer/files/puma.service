@@ -1,0 +1,14 @@
+[Unit]
+Description=Puma service
+After=mongod.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/reddit
+ExecStart=/usr/local/bin/puma
+TimeoutSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

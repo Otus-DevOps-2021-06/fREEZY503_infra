@@ -23,11 +23,17 @@
             "type": "shell",
             "script": "scripts/install_mongodb.sh",
             "execute_command": "sudo {{.Path}}"
-        }
+        },
+		{
+            "type": "file",
+            "source": "files/puma.service",
+            "destination": "~/puma.service"
+        },
 		{
             "type": "shell",
-            "script": "packer/files/deploy.sh",
+            "script": "scripts/deploy.sh",
             "execute_command": "sudo {{.Path}}"
         }
+
     ]
 }
