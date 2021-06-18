@@ -21,3 +21,8 @@ This feature is useful if there are multiple levels of separation between a bast
 bastion_IP = 178.154.226.20 
 someinternalhost_IP = 10.128.0.27
 
+## Test App
+
+testapp_IP = 130.193.37.198
+testapp_port = 9292
+
