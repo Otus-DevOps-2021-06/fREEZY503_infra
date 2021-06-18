@@ -29,17 +29,14 @@ testapp_port = 9292
 ## Packer
 В процессе сделано:
  - Основное задание (создание образа с помощью шаблона)
- ~~~
- ubuntu16.json
- variables.json
+ ~~~bash
+ packer build -var-file=./packer/variables.json ./packer/ubuntu16.json
  ~~~
  - Дополнительное задание (Построение bake-образа)
  ~~~
- immutable.json
+ packer build -var-file=./packer/variables.json ./packer/immutable.json
  ~~~
  - Дополнительное задание (Автоматизация создания ВМ)
  ~~~
- create-reddit-vm.sh
+ config-scripts/create-reddit-vm.sh
  ~~~
- 
-
