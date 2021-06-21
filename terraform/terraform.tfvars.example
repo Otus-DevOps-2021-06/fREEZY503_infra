@@ -1,0 +1,8 @@
+cloud_id                 = "cloud_id "
+folder_id                = "folder_id "
+zone                     = "zone_id"
+image_id                 = "image_id "
+public_key_path          = "~/.ssh/ssh.pub"
+subnet_id                = "subnet_id"
+service_account_key_file = "~/key.json"
+private_ssh_key          = "~/.ssh/ssh"
