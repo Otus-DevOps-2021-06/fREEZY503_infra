@@ -1,11 +1,3 @@
-terraform {
-  required_providers {
-    yandex = {
-      source = "yandex-cloud/yandex"
-    }
-  }
-}
-
 resource "yandex_lb_network_load_balancer" "lb" {
   name = "reddit-app-balancer"
 
