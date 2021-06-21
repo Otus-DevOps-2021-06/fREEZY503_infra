@@ -1,3 +1,7 @@
+terraform {
+  required_version = "~> 0.12.0"
+}
+
 provider "yandex" {
   #version = "0.35"
   # token = ""
