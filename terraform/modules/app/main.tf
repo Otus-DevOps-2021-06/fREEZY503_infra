@@ -1,12 +1,4 @@
-#terraform {
-#  required_providers {
-#    yandex = {
-#      source = "yandex-cloud/yandex"
-#    }
-#  }
-#}
 resource "yandex_compute_instance" "app" {
-  #count = var.count_app
   name  = "reddit-app"
   zone  = var.zone
 
@@ -20,7 +12,6 @@ resource "yandex_compute_instance" "app" {
 
   boot_disk {
     initialize_params {
-      # Указать id образа созданного в предыдущем домашем задании
       image_id = var.app_disk_image
     }
   }
