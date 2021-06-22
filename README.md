@@ -62,3 +62,17 @@ testapp_port = 9292
  ~~~
  storage-bucket.tf
  ~~~
+ 
+## Ansible-1
+После удаления директории с приложением (~/reddit) с помощью команды 'rm -rf ~/reddit', запустив плейбук, плейбук используя модуль git, клонирует репозиторий в директорию ~/reddit и отражает это действие в итоге, как changed=1. <br>
+В процессе сделано:
+ - Основное задание (Созданы inventory файлы, ansible.cfg, плейбук clone.yml)
+ - Задание с * (Создан inventory.json и скрипт dynamic.sh для работы с ним) 
+ ~~~bash
+ #Вывод всех хостов из inventory.json файла
+ sh dynamic.sh --list
+ 
+ #Вывод переменных для определенного хоста из inventory.json файла
+ sh dynamic.sh --host db
+ sh dynamic.sh --host app
+ ~~~
