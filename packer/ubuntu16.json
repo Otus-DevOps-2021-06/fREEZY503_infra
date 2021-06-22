@@ -10,7 +10,8 @@
             "ssh_username": "ubuntu",
             "platform_id": "standard-v1",
 	    "use_ipv4_nat": "true",
-  	    "disk_type": "network-hdd"
+	    "disk_type": "network-hdd"
+
         }
     ],
     "provisioners": [
