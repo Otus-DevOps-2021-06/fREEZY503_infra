@@ -1,5 +1,5 @@
 {
-  "key": "files/key.json",
+  "key": "packer/files/key.json",
   "folder_id": "b1ggq5bpgikblcm66l3m",
   "image_name": "reddit-base-{{timestamp}}",
   "source_image_id": "fd869u2laf181s38k2cr"
