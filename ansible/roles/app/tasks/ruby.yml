@@ -1,3 +1,4 @@
+---
 # Install ruby and git
 - name: Install ruby and rubygems and required packages
   apt:
