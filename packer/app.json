@@ -5,7 +5,7 @@
 	    "service_account_key_file": "{{user `key`}}",
  	    "folder_id": "{{user `folder_id`}}",
             "source_image_id": "{{user `source_image_id`}}",
-            "image_name": "reddit-app-base-ansible",
+            "image_name": "reddit-app-base-ansible-molecule",
             "image_family": "reddit-base",
             "ssh_username": "ubuntu",
             "platform_id": "standard-v1",
@@ -17,7 +17,11 @@
         {
             "type": "ansible",
             "playbook_file": "ansible/playbooks/packer_app.yml",
-			"user": "ubuntu"
+			"user": "ubuntu",
+            "groups": ["app"],
+            "extra_arguments": ["--tags","ruby"],
+            "ansible_env_vars": ["ANSIBLE_ROLES_PATH={{ pwd }}/ansible/roles"]
+
         }
     ]
 }

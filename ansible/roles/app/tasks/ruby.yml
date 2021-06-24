@@ -1,0 +1,8 @@
+---
+- name: Apt update and install ruby-full ruby-bundler build-essential
+  apt:
+    pkg:
+    - ruby-full
+    - ruby-bundler
+    - build-essential
+    update_cache: yes
