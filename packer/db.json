@@ -5,7 +5,7 @@
 	    "service_account_key_file": "{{user `key`}}",
  	    "folder_id": "{{user `folder_id`}}",
             "source_image_id": "{{user `source_image_id`}}",
-            "image_name": "reddit-db-base-ansible",
+            "image_name": "reddit-db-base-ansible-molecule",
             "image_family": "reddit-base",
             "ssh_username": "ubuntu",
             "platform_id": "standard-v1",
@@ -17,7 +17,10 @@
         {
             "type": "ansible",
             "playbook_file": "ansible/playbooks/packer_db.yml",
-			"user" : "ubuntu"
+			"user" : "ubuntu",
+            "groups": ["db"],
+            "extra_arguments": ["--tags","install"],
+            "ansible_env_vars": ["ANSIBLE_ROLES_PATH={{ pwd }}/ansible/roles"]
         }
     ]
 }

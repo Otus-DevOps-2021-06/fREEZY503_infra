@@ -1,0 +1,14 @@
+---
+# Install ruby and git
+- name: Install ruby and rubygems and required packages
+  apt:
+    pkg:
+    - ruby-full
+    - ruby-bundler
+    - build-essential
+    - git
+    state: "present"
+    update_cache: true
+    install_recommends: true
+  tags:
+  - install
