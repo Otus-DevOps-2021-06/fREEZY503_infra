@@ -16,6 +16,8 @@ before_script:
 staging:
   stage: stage
   when: manual
+  only: 
+    - /^\d+\.\d+\.\d+/
   script:
     - echo 'Deploy'
   environment:
