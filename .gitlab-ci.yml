@@ -50,7 +50,7 @@ build_job:
     - docker:dind
   image: docker 
   before_script:
-    - docker info
+    - ""
   script:
     - docker pull freezy503/otus-reddit:1.0
     - docker run -d -p 9292:9292 freezy503/otus-reddit:1.0
