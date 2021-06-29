@@ -47,7 +47,7 @@ production:
 build_job:
   stage: build
   services: 
-    docker:latest
+    - docker:latest
   image: docker
   script:
     - docker pull freezy503/otus-reddit:1.0
